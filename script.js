@@ -23,10 +23,18 @@ document.getElementById("loginForm")?.addEventListener("submit", function(event)
 // ========== AUTOMATIC CHANGING BACKGROUND (DASHBOARD.HTML) ==========
 function setRandomBackground() {
     const backgroundImages = [
-        "images/background1.jpg",
-        "images/background2.jpg",
-        "images/background3.jpg",
-        "images/background4.jpg"
+        "images/WhatsApp Image 2025-05-11 at 20.54.44.jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.43 (1).jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.43.jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.41.jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.40 (1).jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.40.jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.32 (2).jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.32.jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.31 (2).jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.31 (1).jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.31.jpeg",
+        "images/WhatsApp Image 2025-05-11 at 20.54.30.jpeg",
     ];
 
     // Pilih gambar acak
