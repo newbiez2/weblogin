@@ -3,8 +3,8 @@ document.getElementById("loginForm")?.addEventListener("submit", function(event)
     event.preventDefault();
 
     // Username dan Password yang benar
-    const correctUsername = "user123";
-    const correctPassword = "password123";
+    const correctUsername = "Nur Hamidah";
+    const correctPassword = "12052001";
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
