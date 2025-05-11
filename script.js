@@ -13,7 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     // Validate login credentials
     if (username === correctUsername && password === correctPassword) {
         alert("Login berhasil!");
-        window.location.href = "dashboard.html"; // Redirect ke dashboard
+        window.location.href = "https://newbiez2.github.io/weblogin/dashboard.html"; // Redirect ke dashboard
     } else {
         errorMessage.textContent = "Username atau password salah.";
     }
