@@ -1,7 +1,8 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
+// ========== LOGIN FUNCTION (INDEX.HTML) ==========
+document.getElementById("loginForm")?.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Sample username and password (You can replace this with a backend in the future)
+    // Username dan Password yang benar
     const correctUsername = "user123";
     const correctPassword = "password123";
 
@@ -10,11 +11,31 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     const errorMessage = document.getElementById("error-message");
 
-    // Validate login credentials
+    // Validasi Login
     if (username === correctUsername && password === correctPassword) {
         alert("Login berhasil!");
-        window.location.href = "https://newbiez2.github.io/weblogin/dashboard.html"; // Redirect ke dashboard
+        window.location.href = "dashboard.html";
     } else {
         errorMessage.textContent = "Username atau password salah.";
     }
 });
+
+// ========== RANDOM BACKGROUND FUNCTION (DASHBOARD.HTML) ==========
+function setRandomBackground() {
+    const backgroundImages = [
+        "images/background1.jpg",
+        "images/background2.jpg",
+        "images/background3.jpg"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+    document.body.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+}
+
+// Memastikan fungsi hanya berjalan di dashboard
+if (window.location.pathname.includes("dashboard.html")) {
+    window.onload = setRandomBackground;
+}
