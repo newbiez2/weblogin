@@ -37,18 +37,21 @@ function setRandomBackground() {
         "images/WhatsApp Image 2025-05-11 at 20.54.30.jpeg",
     ];
 
-    // Pilih gambar acak
     const randomIndex = Math.floor(Math.random() * backgroundImages.length);
-    document.body.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundRepeat = "no-repeat";
+    const selectedImage = backgroundImages[randomIndex];
+    
+    // Tambahkan sedikit delay untuk transisi halus
+    document.body.style.opacity = "0";
+    setTimeout(() => {
+        document.body.style.backgroundImage = `url('${selectedImage}')`;
+        document.body.style.opacity = "1";
+    }, 300); // 300ms delay untuk transisi lebih halus
 }
 
-// Ganti gambar setiap 5 detik (5000 ms)
+// Ganti gambar setiap 5 detik
 function startBackgroundChange() {
-    setRandomBackground(); // Ganti saat halaman dibuka
-    setInterval(setRandomBackground, 5000); // Ganti setiap 5 detik
+    setRandomBackground();
+    setInterval(setRandomBackground, 5000);
 }
 
 // Jalankan fungsi saat halaman dashboard dimuat
