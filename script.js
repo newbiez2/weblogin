@@ -12,9 +12,9 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // Validate login credentials
     if (username === correctUsername && password === correctPassword) {
-        alert("Login successful!");
-        // Redirect to another page or show dashboard here
+        alert("Login berhasil!");
+        window.location.href = "dashboard.html"; // Redirect ke dashboard
     } else {
-        errorMessage.textContent = "Invalid username or password.";
+        errorMessage.textContent = "Username atau password salah.";
     }
 });
